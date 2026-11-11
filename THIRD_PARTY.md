@@ -5,8 +5,8 @@
 
 ## 0. 口径与统计
 
-- 本次共盘点 **21 个**点名运动平台，收录项目 / 仓库 / 依赖条目 **74 条**。
-- 许可证口径：**已核实 40 条**（表内列出 SPDX 简称）；**未核实 34 条**（表三，含 NOASSERTION 自定义许可、根目录无 LICENSE 文件、404 / 待复核仓库）。
+- 本次共盘点 **21 个**点名运动平台，收录项目 / 仓库 / 依赖条目 **75 条**。
+- 许可证口径：**已核实 40 条**（表内列出 SPDX 简称）；**未核实 35 条**（表三，含 NOASSERTION 自定义许可、根目录无 LICENSE 文件、404 / 待复核仓库）。
 - **「未核实」不等于「无许可证」，更不等于「公有领域」**；引入其代码前必须重新打开仓库 LICENSE / About 信息核对。
 - 易过期信息（星数、最近提交、活跃度、许可证归属）以检索当日为准；本清单不写死星数与提交哈希。
 - 各运动平台数据版权归原平台所有；本知识库与参考工具仅用于用户**个人数据的迁移与备份**，不得用于商业用途或批量数据爬取。
@@ -74,7 +74,7 @@
 | 24 | Kub-AT/suunto-movescount-exporter | https://github.com/Kub-AT/suunto-movescount-exporter | MIT | Suunto 旧 Movescount 活动导出历史参考 |
 | 25 | GPSBabel/gpsbabel | https://github.com/GPSBabel/gpsbabel | GPL-2.0 | FIT/GPX/TCX/KML 等轨迹格式互转本地工具链 |
 | 26 | yihong0618/running_page | https://github.com/yihong0618/running_page | MIT | 咕咚/Keep/Garmin-CN/Strava/NRC/COROS 等多平台采集、GPX 备份、Strava↔Garmin 双向同步与个人主页架构参考 |
-| 27 | Anathleticbicyclist/sync-igpsport-magene-onelap-xingzhe-data-to-outbase | https://github.com/Anathleticbicyclist/sync-igpsport-magene-onelap-xingzhe-data-to-outbase | MIT | 作者本人前置仓库；多平台 → Outbase 上传链路与基础架构参考 |
+| 27 | Anathleticbicyclist/sync-igpsport-magene-onelap-xingzhe-data-to-outbase | https://github.com/Anathleticbicyclist/sync-igpsport-magene-onelap-xingzhe-data-to-outbase | MIT | 作者本人前置仓库；iGP/行者/迈金/黑鸟/捷安特/佳明/高驰/Wahoo/MyWhoosh/Zwift/Keep/咕咚/Zepp/Komoot/Suunto/百锐腾/CyCity 等多平台采集 → Outbase 上传链路与基础架构参考 |
 
 ### 2.2 FIT 解析 / 生成库
 
@@ -106,7 +106,7 @@
 
 ---
 
-## 三、未核实 / 待复核项目（34 条）
+## 三、未核实 / 待复核项目（35 条）
 
 > 以下条目在本次环境中未读到可确认的 LICENSE（含 NOASSERTION 自定义许可、根目录无 LICENSE 文件、仓库 404 / 链接待复核）。**许可证状态以重新检索当日仓库为准**；在核实前不得据此判断可自由商用。完整字段（鉴权、格式、方向、局限）见矩阵 §6.3。
 
@@ -146,6 +146,7 @@
 | 32 | ggps（PyPI） | https://pypi.org/project/ggps/ | 未核实 | Garmin 导出 GPX/TCX 解析工具集 |
 | 33 | ben-29/workouts_page | https://github.com/ben-29/workouts_page | 未核实（本次 403 待复核） | running_page 多运动类型 fork |
 | 34 | robiningelbrecht/statistics-for-strava | https://github.com/robiningelbrecht/statistics-for-strava | 未核实 | 自托管 Strava 分析仪表盘（文件导入模式） |
+| 35 | Anathleticbicyclist/sports-data-sync-multiplatform | https://github.com/Anathleticbicyclist/sports-data-sync-multiplatform | 未核实（无根 LICENSE；含反编译 smali_source 与 APK 产物） | 作者本人开发体验版；多平台双向互传链路参考（许可证未核实，复用前自行评估法律风险） |
 
 > 备注：第 6、17、18、19 项在本知识库开发过程中被直接参考或移植，但其开源许可证未在本次环境核实；若对外分发或商用，须先补齐 LICENSE 核对或移除对应移植代码。
 

@@ -14,7 +14,7 @@
 - 支撑你通过 Agent 定制自己的数据同步工作台 / 个人数据中台：落地形态可以是命令行脚本、定时同步任务、桌面端工具，也可以是 App 内的同步模块；技能只给方法、口径与校验工具，具体产品形态由你的项目决定；
 - 让数据快速、准确地在平台间流动：格式归一、时区对齐、坐标纠偏、入库判重与回归验证都有明确护栏，避免"显示成功但平台没数据""时间偏 8 小时 / 16 小时""改完字节文件失效"这类反复验证。
 
-**覆盖范围**：21 个点名运动平台、74 条开源对标项目；格式覆盖 FIT / GPX / TCX；平台含 iGPSPORT（国内 / 国际）、行者、迈金、黑鸟、捷安特、Outbase、Intervals.icu、佳明国际 / 中国、高驰、Wahoo、MyWhoosh、Zwift、Keep、咕咚、Zepp、Komoot、Suunto、百锐腾、CyCity、Strava 等（未接 / 实验室平台在文档中标注待核实）。
+**覆盖范围**：21 个点名运动平台、75 条开源对标项目；格式覆盖 FIT / GPX / TCX；平台含 iGPSPORT（国内 / 国际）、行者、迈金、黑鸟、捷安特、Outbase、Intervals.icu、佳明国际 / 中国、高驰、Wahoo、MyWhoosh、Zwift、Keep、咕咚、Zepp、Komoot、Suunto、百锐腾、CyCity、Strava 等（未接 / 实验室平台在文档中标注待核实）。
 
 仓库分两部分：
 
@@ -35,7 +35,7 @@
 | 时区判定 | 三文件形态识别、活动开始时间锚点法、幂等 / 量程 / 锚缺失三条护栏、±16h 防叠加 | `references/timezone.md` |
 | 上传与入库 | 上传路径与字段名、异步 pending 等待与核对、平台判重码、去重记忆键 | `references/platforms.md`、`references/pitfalls.md` |
 | 回归与排坑 | 版本回归二分定位、跨方向回归清单、高频坑位"现象—根因—定位—修法—防范" | `references/pitfalls.md`、`docs/03-踩坑录-版本回归主线与开发陷阱.md` |
-| 开源对标 | 74 条同步工具 / 聚合器 / 解析库：接入方法、鉴权、格式、方向、许可证状态与使用前更新步骤 | `references/opensource.md`、`docs/02-开源项目对标矩阵.md` |
+| 开源对标 | 75 条同步工具 / 聚合器 / 解析库：接入方法、鉴权、格式、方向、许可证状态与使用前更新步骤 | `references/opensource.md`、`docs/02-开源项目对标矩阵.md` |
 
 **技能边界**：不含课表（workout）同步、热力图、轨迹合并 / 贴纸、码表子功能；这些见知识库代码导览对应章节。
 
@@ -260,7 +260,7 @@ Agent 动作：读 `references/opensource.md` 与对标矩阵，按方向 / 格�
 
 ## 开源参考与更新须知
 
-- 完整对标矩阵见 [`docs/02-开源项目对标矩阵.md`](docs/02-开源项目对标矩阵.md)（21 个平台、74 条项目，含 URL、检索关键词、鉴权、格式、方向、许可证状态与重新检索步骤）；Skill 内高复用条目见 `references/opensource.md`。
+- 完整对标矩阵见 [`docs/02-开源项目对标矩阵.md`](docs/02-开源项目对标矩阵.md)（21 个平台、75 条项目，含 URL、检索关键词、鉴权、格式、方向、许可证状态与重新检索步骤）；Skill 内高复用条目见 `references/opensource.md`。
 - **使用任何第三方项目前**，先按其 URL 或检索关键词重新核对仓库主页 README、最近提交与 LICENSE；星数、最近提交、活跃度、许可证均为易过期信息，以检索当日为准。
 - 标注「未核实」不等于「无许可证」或「公有领域」；引入其代码前必须重新打开仓库 LICENSE 核对，禁止据此判断可自由商用。
 
@@ -271,6 +271,11 @@ Agent 动作：读 `references/opensource.md` 与对标矩阵，按方向 / 格�
 - [`THIRD_PARTY.md`](THIRD_PARTY.md)：平台鸣谢、已核实许可证项目、未核实 / 待复核条目、规范 Schema 来源；
 - [`docs/02-开源项目对标矩阵.md`](docs/02-开源项目对标矩阵.md)：全量项目对照与检索关键词；
 - [`docs/04-运动数据规范-FIT-GPX-TCX.md`](docs/04-运动数据规范-FIT-GPX-TCX.md)：FIT / GPX / TCX 规范出处。
+
+作者本人前置 / 体验仓库（第一方项目，非第三方开源依赖）：
+
+- 正式版 [sync-igpsport-magene-onelap-xingzhe-data-to-outbase](https://github.com/Anathleticbicyclist/sync-igpsport-magene-onelap-xingzhe-data-to-outbase)：MIT 已核实，多平台采集 → Outbase 单向迁移。
+- 开发体验版 [sports-data-sync-multiplatform](https://github.com/Anathleticbicyclist/sports-data-sync-multiplatform)：**根目录无 LICENSE，含反编译 `smali_source/` 与 APK 产物，许可证未核实**；仅作方法参考，复用 / 分发前须自行评估法律风险。
 
 各运动平台名称、商标与活动数据版权归各自平台所有；第三方项目的许可证以其仓库 LICENSE 为准，本仓库不代为更改。
 
