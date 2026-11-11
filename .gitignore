@@ -1,0 +1,44 @@
+# ---- 二进制产物与签名材料（禁止入库） ----
+*.apk
+*.aab
+*.idsig
+*.keystore
+*.jks
+*.p12
+*.pem
+*.cer
+
+# ---- 运动数据样本与取证文件（禁止入库） ----
+*.db
+*.sqlite
+*.sqlite3
+*.fit
+*.gpx
+*.tcx
+*.log
+*.json
+*.bak
+*.zip
+*.gz
+*.7z
+*.rar
+
+# 凭证 / 偏好设置备份
+*prefs*.xml
+*shared_prefs*
+
+# ---- 构建与缓存 ----
+build/
+dist/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---- 操作系统与编辑器噪声 ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+*.swp
