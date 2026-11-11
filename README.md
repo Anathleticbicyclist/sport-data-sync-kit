@@ -16,6 +16,11 @@
 
 **覆盖范围**：21 个点名运动平台、75 条开源对标项目；格式覆盖 FIT / GPX / TCX；平台含 iGPSPORT（国内 / 国际）、行者、迈金、黑鸟、捷安特、Outbase、Intervals.icu、佳明国际 / 中国、高驰、Wahoo、MyWhoosh、Zwift、Keep、咕咚、Zepp、Komoot、Suunto、百锐腾、CyCity、Strava 等（未接 / 实验室平台在文档中标注待核实）。
 
+**检索标签（中英文分开）**
+
+- 英文主题标签（仓库 About → Topics，GitHub 仅接受小写字母 / 数字 / 连字符）：`igpsport` `xingzhe` `magene` `blackbird` `giant` `outbase` `intervals-icu` `garmin` `coros` `wahoo` `mywhoosh` `zwift` `keep` `codoon` `zepp` `komoot` `suunto` `bryton` `cycity` `strava`
+- 中文 / 别名关键词：iGPSPORT 迹驰、行者 imxingzhe、迈金 / OneLap / 顽鹿 OTM、黑鸟单车、捷安特 Giant、Outbase、Intervals.icu、佳明 Garmin（国际 / 中国）、高驰 COROS、Wahoo、MyWhoosh、Zwift、Keep、咕咚 Codoon、Zepp / 华米 / Amazfit、Komoot、Suunto 松拓、百锐腾 Bryton、CyCity、Strava；运动数据、骑行数据、跑步数据、跨平台数据同步、轨迹格式转换、FIT / GPX / TCX、Agent Skill、知识库
+
 仓库分两部分：
 
 - `docs/`：Markdown 知识库，供人阅读与 Agent 检索；
