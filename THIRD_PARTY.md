@@ -5,8 +5,8 @@
 
 ## 0. 口径与统计
 
-- 本次共盘点 **21 个**点名运动平台，收录项目 / 仓库 / 依赖条目 **73 条**。
-- 许可证口径：**已核实 39 条**（表内列出 SPDX 简称）；**未核实 34 条**（表三，含 NOASSERTION 自定义许可、根目录无 LICENSE 文件、404 / 待复核仓库）。
+- 本次共盘点 **21 个**点名运动平台，收录项目 / 仓库 / 依赖条目 **74 条**。
+- 许可证口径：**已核实 40 条**（表内列出 SPDX 简称）；**未核实 34 条**（表三，含 NOASSERTION 自定义许可、根目录无 LICENSE 文件、404 / 待复核仓库）。
 - **「未核实」不等于「无许可证」，更不等于「公有领域」**；引入其代码前必须重新打开仓库 LICENSE / About 信息核对。
 - 易过期信息（星数、最近提交、活跃度、许可证归属）以检索当日为准；本清单不写死星数与提交哈希。
 - 各运动平台数据版权归原平台所有；本知识库与参考工具仅用于用户**个人数据的迁移与备份**，不得用于商业用途或批量数据爬取。
@@ -40,7 +40,7 @@
 
 ---
 
-## 二、已核实许可证的开源项目（39 条）
+## 二、已核实许可证的开源项目（40 条）
 
 > 许可证为 2026-11-11 核对仓库 LICENSE / About 信息所得 SPDX 简称；引入代码前仍应按表内 URL 复核最新许可证文本。
 
@@ -74,34 +74,35 @@
 | 24 | Kub-AT/suunto-movescount-exporter | https://github.com/Kub-AT/suunto-movescount-exporter | MIT | Suunto 旧 Movescount 活动导出历史参考 |
 | 25 | GPSBabel/gpsbabel | https://github.com/GPSBabel/gpsbabel | GPL-2.0 | FIT/GPX/TCX/KML 等轨迹格式互转本地工具链 |
 | 26 | yihong0618/running_page | https://github.com/yihong0618/running_page | MIT | 咕咚/Keep/Garmin-CN/Strava/NRC/COROS 等多平台采集、GPX 备份、Strava↔Garmin 双向同步与个人主页架构参考 |
+| 27 | Anathleticbicyclist/sync-igpsport-magene-onelap-xingzhe-data-to-outbase | https://github.com/Anathleticbicyclist/sync-igpsport-magene-onelap-xingzhe-data-to-outbase | MIT | 作者本人前置仓库；多平台 → Outbase 上传链路与基础架构参考 |
 
 ### 2.2 FIT 解析 / 生成库
 
 | # | 项目 | URL | 许可证 | 引用部分 |
 |---|---|---|---|---|
-| 27 | dtcooper/python-fitparse | https://github.com/dtcooper/python-fitparse | MIT | ANT/Garmin FIT 只读解析库 |
-| 28 | nbr23/python-fitparse | https://github.com/nbr23/python-fitparse | MIT | python-fitparse 活跃维护 fork |
-| 29 | polyvertex/fitdecode | https://github.com/polyvertex/fitdecode | MIT | Python3 FIT 解码库 |
-| 30 | tormoder/fit | https://github.com/tormoder/fit | MIT | Go 语言 FIT 解码/编码库 |
-| 31 | muktihari/fit | https://github.com/muktihari/fit | BSD-3-Clause | Go 语言 FIT V2 编解码库 |
-| 32 | fitfile / tcgoetz/GarminDB | https://github.com/tcgoetz/GarminDB ；https://pypi.org/project/fitfile/ | GPL-2.0（GarminDB；fitfile 单包未独立核实） | GarminDB 生态 FIT 解析模块 |
+| 28 | dtcooper/python-fitparse | https://github.com/dtcooper/python-fitparse | MIT | ANT/Garmin FIT 只读解析库 |
+| 29 | nbr23/python-fitparse | https://github.com/nbr23/python-fitparse | MIT | python-fitparse 活跃维护 fork |
+| 30 | polyvertex/fitdecode | https://github.com/polyvertex/fitdecode | MIT | Python3 FIT 解码库 |
+| 31 | tormoder/fit | https://github.com/tormoder/fit | MIT | Go 语言 FIT 解码/编码库 |
+| 32 | muktihari/fit | https://github.com/muktihari/fit | BSD-3-Clause | Go 语言 FIT V2 编解码库 |
+| 33 | fitfile / tcgoetz/GarminDB | https://github.com/tcgoetz/GarminDB ；https://pypi.org/project/fitfile/ | GPL-2.0（GarminDB；fitfile 单包未独立核实） | GarminDB 生态 FIT 解析模块 |
 
 ### 2.3 GPX / TCX 解析库
 
 | # | 项目 | URL | 许可证 | 引用部分 |
 |---|---|---|---|---|
-| 33 | tkrajina/gpxpy | https://github.com/tkrajina/gpxpy | Apache-2.0 | GPX 解析/生成标准库 |
-| 34 | alenrajsp/tcxreader | https://github.com/alenrajsp/tcxreader | MIT | Garmin TCX 容错读取库 |
-| 35 | thomthom/fastgpx | https://github.com/thomthom/fastgpx | MIT | 高性能 GPX 解析实验库 |
+| 34 | tkrajina/gpxpy | https://github.com/tkrajina/gpxpy | Apache-2.0 | GPX 解析/生成标准库 |
+| 35 | alenrajsp/tcxreader | https://github.com/alenrajsp/tcxreader | MIT | Garmin TCX 容错读取库 |
+| 36 | thomthom/fastgpx | https://github.com/thomthom/fastgpx | MIT | 高性能 GPX 解析实验库 |
 
 ### 2.4 本知识库直接依赖库
 
 | # | 项目 | URL | 许可证 | 引用部分 |
 |---|---|---|---|---|
-| 36 | square/okhttp | https://github.com/square/okhttp | Apache-2.0 | HTTP 客户端（所有网络请求） |
-| 37 | Kotlin/kotlinx.coroutines | https://github.com/Kotlin/kotlinx.coroutines | Apache-2.0 | Kotlin 异步协程库 |
-| 38 | material-components/material-components-android | https://github.com/material-components/material-components-android | Apache-2.0 | Material Design Android 组件库（维护模式） |
-| 39 | androidx/androidx | https://github.com/androidx/androidx | Apache-2.0 | AndroidX Jetpack 扩展库 |
+| 37 | square/okhttp | https://github.com/square/okhttp | Apache-2.0 | HTTP 客户端（所有网络请求） |
+| 38 | Kotlin/kotlinx.coroutines | https://github.com/Kotlin/kotlinx.coroutines | Apache-2.0 | Kotlin 异步协程库 |
+| 39 | material-components/material-components-android | https://github.com/material-components/material-components-android | Apache-2.0 | Material Design Android 组件库（维护模式） |
+| 40 | androidx/androidx | https://github.com/androidx/androidx | Apache-2.0 | AndroidX Jetpack 扩展库 |
 
 ---
 

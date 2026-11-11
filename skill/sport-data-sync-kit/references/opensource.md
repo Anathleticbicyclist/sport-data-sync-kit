@@ -1,7 +1,7 @@
 # 高价值开源参考项目清单
 
 > 核验日期：2026-11-11。提炼自本知识库 `02-开源项目对标矩阵.md`。
-> 本文件只收高复用度项目；完整 73 条清单（含全部实验室/未接平台参考）见
+> 本文件只收高复用度项目；完整 74 条清单（含全部实验室/未接平台参考）见
 > `docs\02-开源项目对标矩阵.md`，不要在本文件内补全完整矩阵。
 
 ## 目录
@@ -121,7 +121,7 @@
 
 ---
 
-**收录统计**：A 组 18 个，B 组 6 个，C 组 3 个，D 组 1 个，合计 28 个高复用项目。其余项目（含实验室平台参考、未核实清单）完整条目见本知识库 `02-开源项目对标矩阵.md`。
+**收录统计**：A 组 19 个，B 组 6 个，C 组 3 个，D 组 1 个，合计 29 个高复用项目。其余项目（含实验室平台参考、未核实清单）完整条目见本知识库 `02-开源项目对标矩阵.md`。
 ### A1. jorge-huxley/intervalssync
 
 - **URL**：https://github.com/jorge-huxley/intervalssync
@@ -265,4 +265,13 @@
 - **可借鉴方法**：同步任务列表、平台凭证展示等前端结构参考；不提供后端接入方法。
 - **方向 / 格式**：Web 展示；无后端链路。
 - **许可证**：未核实（NOASSERTION，引入前核对）。
+
+### A19. Anathleticbicyclist/sync-igpsport-magene-onelap-xingzhe-data-to-outbase
+
+- **URL**：https://github.com/Anathleticbicyclist/sync-igpsport-magene-onelap-xingzhe-data-to-outbase
+- **检索关键词**：sync-igpsport-magene-onelap-xingzhe-data-to-outbase；Kotlin；多平台骑行数据同步 Outbase
+- **可借鉴方法**：多源平台账号登录与活动采集 → 归一化 → 上传 Outbase 的工程分层；多平台适配层与上传链路组织参考。
+- **方向 / 格式**：多平台 → Outbase 上传；FIT/GPX。
+- **许可证**：MIT（已核实）。
+- **备注**：作者本人前置仓库（第一方项目，非第三方开源依赖）；引用前仍按 URL 核对最新 README 与 LICENSE。
 
