@@ -78,6 +78,57 @@ sport-data-sync-kit/
 2. **项目级（团队共享，随 Git 提交）**：放到项目根的 `.agents/skills/sport-data-sync-kit/`。
 3. **用户级（个人跨项目复用）**：放到 `~/.agents/skills/sport-data-sync-kit/`（Windows 为 `%USERPROFILE%\.agents\skills\`）。
 
+### 一键安装：从 GitHub 拉取（复制即用）
+
+下面三种方式任选其一；装到哪个目录，对照本页「各智能体挂载速查」表中你的工具行。跨工具通用目录为 `.agents/skills/`，只认自有目录的工具（如 `.claude/skills/`、`.cursor/skills/`）按表复制到对应位置。
+
+**方式 A：复制话术发给你的编码智能体（让它自己下载安装）**
+
+把下面整段粘贴到对话框，并把 `{当前工具}` 替换为你使用的工具名（如 Claude Code、Codex CLI、Cursor、Trae）：
+
+```text
+请从 GitHub 安装开放 Skill「sport-data-sync-kit」，步骤如下：
+1. 仓库：https://github.com/Anathleticbicyclist/sport-data-sync-kit （main 分支，MIT）。
+2. 优先执行：git clone --depth 1 https://github.com/Anathleticbicyclist/sport-data-sync-kit.git；本机没有 git 时，改下载 ZIP：https://codeload.github.com/Anathleticbicyclist/sport-data-sync-kit/zip/refs/heads/main 并解压。
+3. 把仓库内 skill/sport-data-sync-kit/ 整个文件夹（必须保留 SKILL.md、references/、scripts/ 的相对结构，不要拆散）安装到当前编码工具「{当前工具}」的 Skill 目录：项目级放 <项目根>/<该工具 skills 目录>/sport-data-sync-kit/，用户级放 ~/<该工具 skills 目录>/sport-data-sync-kit/；文件夹名与 SKILL.md frontmatter 的 name 保持一致。各工具目录见仓库 README「各智能体挂载速查」表。
+4. 安装后自检：确认 SKILL.md 可读、frontmatter 中 name=sport-data-sync-kit；references/ 下 5 份 md 与 scripts/check_fit.py 都在。重新加载智能体后，用一句运动数据相关任务触发（例如“帮我解析这个 FIT 并排查时区偏移”），确认技能被加载。
+5. 不要安装仓库外的临时脚本、日志或二进制产物；引用第三方项目前，按 references/opensource.md 里的链接重新核对 README 与 LICENSE。
+```
+
+**方式 B：命令行 git clone（用户级，跨项目复用）**
+
+Windows PowerShell：
+
+```powershell
+git clone --depth 1 https://github.com/Anathleticbicyclist/sport-data-sync-kit.git "$env:TEMP\sds-kit"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.agents\skills" | Out-Null
+Copy-Item -Recurse "$env:TEMP\sds-kit\skill\sport-data-sync-kit" "$env:USERPROFILE\.agents\skills\sport-data-sync-kit"
+```
+
+macOS / Linux（bash）：
+
+```bash
+git clone --depth 1 https://github.com/Anathleticbicyclist/sport-data-sync-kit.git /tmp/sds-kit
+mkdir -p ~/.agents/skills
+cp -R /tmp/sds-kit/skill/sport-data-sync-kit ~/.agents/skills/sport-data-sync-kit
+```
+
+项目级安装（随仓库提交给团队）：把上面的目标路径换成项目根下的 `.agents/skills/sport-data-sync-kit/`；某工具只认自有目录时，按速查表对应目录复制。
+
+**方式 C：本机无 git，下载 ZIP 解压安装（PowerShell）**
+
+```powershell
+Invoke-WebRequest "https://codeload.github.com/Anathleticbicyclist/sport-data-sync-kit/zip/refs/heads/main" -OutFile "$env:TEMP\sds-kit.zip"
+Expand-Archive "$env:TEMP\sds-kit.zip" "$env:TEMP\sds-kit" -Force
+Copy-Item -Recurse "$env:TEMP\sds-kit\sport-data-sync-kit-main\skill\sport-data-sync-kit" "$env:USERPROFILE\.agents\skills\sport-data-sync-kit"
+```
+
+**安装后自检清单**：
+
+- 目录内应包含：`SKILL.md`、`references/formats.md`、`references/timezone.md`、`references/platforms.md`、`references/pitfalls.md`、`references/opensource.md`、`scripts/check_fit.py`；
+- 校验脚本可运行：`python <skill 目录>/scripts/check_fit.py <file.fit>`；
+- 重新加载智能体后，用触发场景（解析 FIT / 排查时区偏移 / 接入某运动平台）验证技能被调用。
+
 ### 各智能体挂载速查
 
 > 下表为 2026-11 版本口径；编码工具迭代很快，**具体路径与开关以各工具官方文档为准**。完整调研、核实状态与待核实点见 [`docs/agent-mount-research.md`](docs/agent-mount-research.md)。
